@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "angular-workshop-v07"
+  "defaultProject": "angular-workshop-v07",
+  "cli": {
+    "analytics": false
+  }
 }

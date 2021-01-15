@@ -1,0 +1,17 @@
+<p>home works!</p>
+<p>
+  <button [routerLink]="['admin']">Admin Page</button>
+</p>
+<ng-template
+  [ngIf]="this.userAuthService.getCurrentAdminStatus()"
+  [ngIfElse]="showUserLogout"
+>
+  <p>
+    <button (click)="this.userAuthService.adminLogout()">Admin Log Out</button>
+  </p>
+</ng-template>
+<ng-template #showUserLogout>
+  <p>
+    <button (click)="this.userAuthService.userLogout()">Log Out</button>
+  </p>
+</ng-template>
